@@ -1,0 +1,16 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#3f1d2e'/>
+      <stop offset='60%' stop-color='#1f2937'/>
+      <stop offset='100%' stop-color='#f59e0b'/>
+    </linearGradient>
+  </defs>
+  <rect width='1600' height='900' fill='url(#g)'/>
+  <circle cx='1300' cy='180' r='220' fill='rgba(255,255,255,0.08)'/>
+  <circle cx='260' cy='760' r='260' fill='rgba(255,255,255,0.06)'/>
+  <rect x='140' y='160' width='1320' height='580' rx='24' fill='rgba(255,255,255,0.08)' stroke='rgba(255,255,255,0.24)'/>
+  <text x='180' y='360' font-family='Segoe UI, Arial, sans-serif' font-size='72' font-weight='700' fill='white'>Installation Gallery</text>
+  <text x='180' y='440' font-family='Segoe UI, Arial, sans-serif' font-size='40' fill='rgba(255,255,255,0.9)'>Project Snapshot 8</text>
+  <text x='180' y='700' font-family='Segoe UI, Arial, sans-serif' font-size='28' fill='rgba(255,255,255,0.8)'>Local project asset - no external image dependency</text>
+</svg>
