@@ -2,11 +2,11 @@
 
 import { useParams } from 'next/navigation'
 import { products } from '@/data/products'
-import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { FiPhone as Phone, FiMessageCircle as MessageCircle, FiMail as Mail, FiCheckCircle as CheckCircle } from 'react-icons/fi'
 import { notFound } from 'next/navigation'
+import Product360Viewer from '@/components/Product360Viewer'
 
 export default function ProductDetailPage() {
   const { slug } = useParams()
@@ -25,15 +25,10 @@ export default function ProductDetailPage() {
           transition={{ duration: 0.6 }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-            {/* Image */}
-            <div className="relative h-96 rounded-xl overflow-hidden shadow-xl">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                className="object-cover"
-              />
-            </div>
+            <Product360Viewer
+              productName={product.name}
+              frames={product.viewerFrames}
+            />
             
             {/* Info */}
             <div>

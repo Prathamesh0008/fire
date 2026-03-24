@@ -38,4 +38,17 @@
   .fire-glow {
     text-shadow: 0 0 18px rgba(235, 46, 46, 0.45);
   }
+
+  .trust-marquee {
+    animation: trust-scroll 24s linear infinite;
+  }
+}
+
+@keyframes trust-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

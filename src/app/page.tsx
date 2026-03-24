@@ -1,11 +1,10 @@
 'use client'
 
 import Hero from '@/components/Hero'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
-import { FiShield as Shield, FiClock as Clock, FiAward as Award, FiUsers as Users, FiZap as Zap, FiCheckCircle as CheckCircle } from 'react-icons/fi'
+import TrustLayer from '@/components/TrustLayer'
+import { motion } from 'framer-motion'
+import { FiShield as Shield, FiClock as Clock, FiAward as Award, FiZap as Zap, FiCheckCircle as CheckCircle } from 'react-icons/fi'
 import Link from 'next/link'
-import CountUp from 'react-countup'
 
 const services = [
   { icon: Shield, title: 'Fire Hydrant Systems', desc: 'Reliable water supply for firefighting' },
@@ -16,17 +15,7 @@ const services = [
   { icon: Award, title: 'Alarm Systems', desc: 'Early warning detection' },
 ]
 
-const stats = [
-  { value: 500, label: 'Projects Completed', suffix: '+' },
-  { value: 1000, label: 'Clients Served', suffix: '+' },
-  { value: 98, label: 'Client Satisfaction', suffix: '%' },
-  { value: 24, label: 'Emergency Support', suffix: '/7' },
-]
-
 export default function Home() {
-  const statsRef = useRef(null)
-  const statsInView = useInView(statsRef, { once: true })
-
   return (
     <>
       <Hero />
@@ -117,28 +106,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section ref={statsRef} className="py-20 bg-primary text-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={statsInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="text-4xl md:text-5xl font-bold mb-2">
-                  {statsInView && (
-                    <CountUp start={0} end={stat.value} duration={2.5} suffix={stat.suffix} />
-                  )}
-                </div>
-                <div className="text-sm opacity-90">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TrustLayer />
 
       {/* CTA Banner */}
       <section className="py-20 bg-secondary">

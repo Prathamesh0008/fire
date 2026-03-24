@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <rect width="1200" height="800" rx="28" fill="#0F172A"/>
+  <rect x="24" y="24" width="1152" height="752" rx="20" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <rect x="70" y="70" width="1060" height="100" rx="12" fill="#1E293B"/>
+  <text x="100" y="132" fill="#F8FAFC" font-size="46" font-family="Arial, sans-serif" font-weight="700">ISO 9001:2015</text>
+  <text x="100" y="175" fill="#94A3B8" font-size="24" font-family="Arial, sans-serif">Quality Management System Certificate</text>
+  <rect x="70" y="220" width="700" height="18" rx="9" fill="#334155"/>
+  <rect x="70" y="256" width="860" height="18" rx="9" fill="#334155"/>
+  <rect x="70" y="292" width="780" height="18" rx="9" fill="#334155"/>
+  <rect x="70" y="328" width="650" height="18" rx="9" fill="#334155"/>
+  <circle cx="960" cy="510" r="120" fill="#7F1D1D"/>
+  <circle cx="960" cy="510" r="96" fill="#DC2626"/>
+  <text x="913" y="522" fill="#fff" font-size="34" font-family="Arial, sans-serif" font-weight="700">CERT</text>
+  <text x="70" y="620" fill="#E2E8F0" font-size="28" font-family="Arial, sans-serif">Cert ID: QMS-2026-1148</text>
+  <text x="70" y="664" fill="#E2E8F0" font-size="28" font-family="Arial, sans-serif">Issued By: Global Compliance Registry</text>
+  <text x="70" y="708" fill="#E2E8F0" font-size="28" font-family="Arial, sans-serif">Valid Till: Dec 2027</text>
+</svg>

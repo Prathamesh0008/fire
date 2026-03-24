@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { FiMail as Mail, FiPhone as Phone, FiMapPin as MapPin, FiClock as Clock, FiSend as Send, FiMessageCircle as MessageCircle } from 'react-icons/fi'
 import { useState } from 'react'
+import QuoteEstimator from '@/components/QuoteEstimator'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -151,6 +152,14 @@ export default function ContactPage() {
                 </button>
               </form>
             </div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45 }}
+              className="mt-8"
+            >
+              <QuoteEstimator />
+            </motion.div>
           </motion.div>
         </div>
 

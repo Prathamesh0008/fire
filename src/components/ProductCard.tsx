@@ -25,6 +25,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
         />
       </div>
       <div className="p-6">
+        <div className="mb-3 flex flex-wrap gap-2">
+          <span className="rounded-full border border-red-500/40 bg-red-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-300">
+            {product.category}
+          </span>
+          {product.useCases.slice(0, 2).map((useCase) => (
+            <span
+              key={useCase}
+              className="rounded-full border border-slate-600 bg-slate-800 px-3 py-1 text-xs font-medium text-slate-300"
+            >
+              {useCase}
+            </span>
+          ))}
+        </div>
         <h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>
         <p className="text-slate-300 mb-4">{product.description}</p>
         <Link
