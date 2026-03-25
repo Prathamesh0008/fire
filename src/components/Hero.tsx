@@ -5,11 +5,15 @@ import { motion } from 'framer-motion'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0b1220] pt-24 md:pt-28">
+    <section className="hero-section relative min-h-screen overflow-hidden bg-[#0b1220] pt-24 md:pt-28">
+      <div
+        className="hero-image absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/assets/hydrant-system.jpeg')" }}
+      />
       {/* Layered atmospheric background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(37,99,235,0.25),transparent_45%),radial-gradient(circle_at_85%_15%,rgba(239,68,68,0.18),transparent_40%),radial-gradient(circle_at_50%_100%,rgba(244,63,94,0.16),transparent_45%)]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0b1220]/95 via-[#0f172a]/85 to-[#111827]/80" />
-      <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:48px_48px]" />
+      <div className="hero-radial absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(37,99,235,0.25),transparent_45%),radial-gradient(circle_at_85%_15%,rgba(239,68,68,0.18),transparent_40%),radial-gradient(circle_at_50%_100%,rgba(244,63,94,0.16),transparent_45%)]" />
+      <div className="hero-gradient absolute inset-0 bg-gradient-to-r from-[#0b1220]/95 via-[#0f172a]/85 to-[#111827]/80" />
+      <div className="hero-grid absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:48px_48px]" />
       
       {/* Content */}
       <div className="relative container-custom flex min-h-[calc(100vh-6rem)] items-center justify-center">
@@ -19,7 +23,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="mx-auto w-full max-w-5xl text-center"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Protecting Lives with{' '}
             <span className="text-primary fire-glow">Advanced Fire Safety</span>{' '}
             Solutions
@@ -28,7 +32,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="mx-auto mb-8 max-w-3xl text-xl text-gray-200"
+            className="hero-subtitle mx-auto mb-8 max-w-3xl text-xl text-gray-200"
           >
             Hydrant | Sprinkler | Fire Equipment | Detection Systems
           </motion.p>

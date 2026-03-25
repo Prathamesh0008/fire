@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FiChevronLeft as ChevronLeft, FiChevronRight as ChevronRight } from 'react-icons/fi'
@@ -13,11 +13,16 @@ interface Product360ViewerProps {
 const dragStep = 30
 
 export default function Product360Viewer({ productName, frames }: Product360ViewerProps) {
-  const [currentFrame, setCurrentFrame] = useState(0)
+  const initialFrame = frames.length > 1 ? 1 : 0
+  const [currentFrame, setCurrentFrame] = useState(initialFrame)
   const [dragStartX, setDragStartX] = useState<number | null>(null)
   const [dragLastX, setDragLastX] = useState<number | null>(null)
 
   const totalFrames = frames.length
+
+  useEffect(() => {
+    setCurrentFrame(initialFrame)
+  }, [initialFrame])
 
   const updateFrame = (direction: 'next' | 'prev') => {
     setCurrentFrame((prev) => {

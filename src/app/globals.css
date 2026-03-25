@@ -16,6 +16,10 @@
   body {
     @apply bg-slate-950 text-slate-100;
   }
+
+  .light-theme body {
+    @apply bg-white text-slate-900;
+  }
 }
 
 @layer components {
@@ -41,6 +45,141 @@
 
   .trust-marquee {
     animation: trust-scroll 24s linear infinite;
+  }
+
+  .footer-surface {
+    @apply bg-secondary text-gray-300;
+  }
+
+  .footer-heading {
+    @apply text-white;
+  }
+
+  .footer-text {
+    @apply text-gray-300;
+  }
+
+  .footer-divider {
+    @apply border-t border-gray-700;
+  }
+
+  .light-theme .footer-surface {
+    @apply bg-white border-t border-slate-200;
+  }
+
+  .light-theme .footer-heading {
+    @apply text-slate-900;
+  }
+
+  .light-theme .footer-text {
+    @apply text-slate-600;
+  }
+
+  .light-theme .footer-divider {
+    @apply border-slate-200;
+  }
+}
+
+@layer utilities {
+  .light-theme .bg-slate-950 {
+    @apply bg-slate-50;
+  }
+
+  .light-theme .bg-slate-900 {
+    @apply bg-white;
+  }
+
+  .light-theme .bg-slate-900\/80 {
+    background-color: rgb(255 255 255 / 0.92);
+  }
+
+  .light-theme .bg-slate-900\/70 {
+    background-color: rgb(255 255 255 / 0.9);
+  }
+
+  .light-theme .bg-slate-900\/60 {
+    background-color: rgb(255 255 255 / 0.86);
+  }
+
+  .light-theme .bg-slate-800 {
+    @apply bg-slate-100;
+  }
+
+  .light-theme .bg-secondary {
+    @apply bg-slate-100;
+  }
+
+  .light-theme .border-slate-800 {
+    @apply border-slate-200;
+  }
+
+  .light-theme .border-slate-700 {
+    @apply border-slate-300;
+  }
+
+  .light-theme .border-slate-600 {
+    @apply border-slate-300;
+  }
+
+  .light-theme .text-slate-100 {
+    @apply text-slate-800;
+  }
+
+  .light-theme .text-slate-200 {
+    @apply text-slate-700;
+  }
+
+  .light-theme .text-slate-300 {
+    @apply text-slate-600;
+  }
+
+  .light-theme .text-slate-400 {
+    @apply text-slate-500;
+  }
+
+  .light-theme .text-gray-300 {
+    @apply text-slate-600;
+  }
+
+  .light-theme .text-white {
+    @apply text-slate-900;
+  }
+
+  .light-theme .btn-primary,
+  .light-theme .btn-primary *,
+  .light-theme .bg-primary,
+  .light-theme .bg-primary *,
+  .light-theme .bg-green-500,
+  .light-theme .bg-green-500 * {
+    color: #fff !important;
+  }
+
+  .light-theme .hero-section {
+    @apply bg-slate-100;
+  }
+
+  .light-theme .hero-image {
+    opacity: 0.35;
+  }
+
+  .light-theme .hero-radial {
+    opacity: 0.25;
+  }
+
+  .light-theme .hero-gradient {
+    background: linear-gradient(90deg, rgb(248 250 252 / 0.94), rgb(255 255 255 / 0.78), rgb(241 245 249 / 0.82));
+  }
+
+  .light-theme .hero-grid {
+    opacity: 0.08;
+  }
+
+  .light-theme .hero-title {
+    @apply text-slate-900;
+  }
+
+  .light-theme .hero-subtitle {
+    @apply text-slate-700;
   }
 }
 
